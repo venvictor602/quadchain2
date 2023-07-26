@@ -1,0 +1,352 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+
+  <!-- Alerts -->
+  {% include 'aleart.html' %}
+    
+<div class="container">
+    <div class="button-center">
+        
+       <button data-toggle="modal" data-target="#inquiryModal" class="btn button-40 ml-auto mr-auto">Connect Wallet</button>
+       
+    </div>
+  
+    <div class="row mt-4 justify-content-between">
+       <div class="col-12 col-lg-8" >
+          <div class="d-flex flex-column justify-content-center text-white text-center text-lg-left">
+
+             <br>
+             <h2 style="text-align:left; font-size:2.3rem;">
+                Welcome to the PreSale of   <span class="span-color">QuadChain </span><img src="{% static 'assets/images/pug-svgrepo-com.svg' %}" style="height: 80px; margin-left: 10px;">
+             </h2>
+             
+             <div class="line"></div>
+             <br>
+             <div class="row animated fadeInUp" id="About" style="background-image:url({% static 'assets/images/ccpug.svg' %});">
+                <div class="col-12 col-lg-10">
+                      <h6 style="text-align: justify; font-size: 18px; word-spacing: -2px">
+                        <div style="word-spacing:-2.8px" class="animated fadeInUp">
+                         The Gangster of all Coins is here. Every coin wishes to be a gangster, but the original will show you how to wear the sunglasses correctly. 80% of the tokens will be in the ICO. there are 5 phases, each with a 12% price increase. all tokens that are not sold in the ico will be burned. 20% will be used for CEX and Liquidity Polls. So secure your place in the QuadChain life club now and don't miss the opportunity to be there from the beginning.
+                            <br><br>
+                        </div>
+                        <span class="animated fadeInUp" style="display: block; animation-delay: 0.5s;">
+                        <span style="font-size: 1.5rem;">About :</span> Everyone is talking about frog, sponge, inu, doge, worm, bird, cat, mouse, fart coins... But none of these coins have the right style to play in the big leagues. All coins want to become ogs, real gangsters, but there can only be one. QuadChain shows the direction and decides who is allowed into the Pygapy Life Club. So hold on to your joints this could be a tumultuous drive followed with blue lights flashing and a trunk full of cash!
+
+                        </span>
+                        <br><br>
+                        <span class="animated fadeInUp" style="display: block; animation-delay: 1s;">
+                         
+
+                        </span>
+                        <br><br>
+                    </h6>
+                </div>
+
+            </div>
+            
+             <br>
+          </div>
+       </div>
+       <div class="col-12 col-lg-4">
+          <div class="card ml-auto text-center mt-2 glowing-effect">
+             <div class="card-body">
+                <div class="count-counter-wrapper" style="flex: 2 1 0%; max-width: 100%">
+                   <!-- <h1 style="color:white">Presale Starts IN</h1> -->
+                   <div class="count-row">
+                      <div class="count-box">
+                         <div class="count-number">{{ days }}</div>
+                         <div class="count-text">Days</div>
+                      </div>
+                      <div class="count-box">
+                         <div class="count-number">{{ hours }}</div>
+                         <div class="count-text">Hours</div>
+                      </div>
+                      <div class="count-box">
+                         <div class="count-number">{{ minutes }}</div>
+                         <div class="count-text">Minutes</div>
+                      </div>
+                      <div class="count-box">
+                         <div class="count-number">{{ seconds }}</div>
+                         <div class="count-text">Seconds</div>
+                      </div>
+                   </div>
+                </div>
+
+
+                <!-- Progress bar and matic raised -->
+
+                <div style="margin-top:30px">
+                   <p class="span-color3">
+                      <span class="running-border">BNB Raised:</span>
+                      <span id="amount-raised" class="running-border">0</span>/100 BNB
+                    </p>
+                   
+                 </div>
+        
+                <div class="line"></div>
+                <div class="inner-card-div mt-4">
+                   <div>
+                      <h3 style="font-weight: bold;"> PHASE 1</h3>
+                    
+                      <h5 style="font-weight: normal;">Exchange Ratio</h5>
+                      <h5 class="mt-2">1 BNB = 50,000,000 $PPAY</h5><br>
+                     
+                   </div>
+                   <div>
+                      <br>
+                      <small>
+                         <p>MIN PURCHASE</p>
+                      </small>
+                      <h5>0.01 BNB</h5>
+                      <br>
+                   </div>
+                   <div>
+                      <br>
+                      <small>
+                         <p>MAX PURCHASE</p>
+                      </small>
+                      <h5>10 BNB</h5>
+                      <br>
+                   </div>
+                   <div>
+                      <br>
+                      <small>
+                         <p>SOFT CAP</p>
+                      </small>
+                      <h5>50 BNB</h5>
+                      <br>
+                   </div>
+                   <div>
+                      <br>
+                      <small>
+                         <p>HARD CAP</p>
+                      </small>
+                      <h5>500 BNB</h5>
+                      <br>
+                   </div>
+                </div>
+              
+                <div class="d-flex justify-content-between mt-3">
+                   <input type="number" class="form-control mr-2" v-model="bnbAmount"
+                      placeholder="ENTER BNB">
+                   <input type="number" class="form-control ml-2" readonly placeholder="TOKENS"
+                      v-model="tokenAmount">
+                </div>
+                <button data-toggle="modal" data-target="#inquiryModal" class="btn button-40 ml-auto mr-auto">BUY $PPAY</button>
+                
+                
+                <div>
+                   
+                </div>
+             </div>
+          </div>
+       </div>
+       <br><br>
+       
+
+    <!-- Card of how to buy -->
+       <div class="container">
+          <h2 class="card-boxx" style="color:#ffffff; margin-top:60px;"> <img src="{% static 'assets/images/paper-plane-origami-svgrepo-com.svg' %}" style="height: 30px; margin-right: 10px;">How to Buy? </h2>
+          <div class="line"></div>
+          <div class="row">
+             <div class="col-md-4 col-xl-3">
+                <div class="card-1 bg-c-blue order-card">
+                   <div class="card-block">
+                      <h6 class="m-b-20"><span class="span-color1">Step:1</span></h6>
+                      <p>To start with, ensure you have a MetaMask wallet installed on your browser in order to connect your wallet to the platform.</p>
+                   </div>
+                </div>
+             </div>
+             <div class="col-md-4 col-xl-3">
+                <div class="card-1 bg-c-green order-card">
+                   <div class="card-block">
+                      <h6 class="m-b-20"><span class="span-color1">Step:2</span></h6>
+                      <p>If you are purchasing on mobile, we recommend using Trust Wallet and connecting through the in-built browser.</p>
+                   </div>
+                </div>
+             </div>
+             <div class="col-md-4 col-xl-3">
+                <div class="card-1 bg-c-yellow order-card">
+                   <div class="card-block">
+                      <h6 class="m-b-20"><span class="span-color1">Step:3</span></h6>
+                      <p>Once you have chosen your swap pair, enter the amount how much you want to invest and press “Buy Now”.</p>
+                   </div>
+                </div>
+             </div>
+             <div class="col-md-4 col-xl-3">
+                <div class="card-1 order-card" style="border-image: linear-gradient(to right, #ff6a00, #ee0979) 1;">
+                   <div class="card-block">
+                      <h6 class="m-b-20"><span class="span-color1">Step:4</span></h6>
+                      <p>Once you make a purchase, you will receive token your token immediately.</p>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <br><br>
+
+<!-- Roadmap  -->
+         
+<div class="containerr" id="Roadmap">
+    <h2  style="text-align: center; color:white;"> <img src="{% static 'assets/images/book-svgrepo-com.svg' %}" style="height: 30px; margin-right: 10px;"> Roadmap</h2>
+    <div class="line"></div>
+
+ 
+ <div class="timeline-container">
+
+
+    
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <i class="fa fa-flag"></i>
+      </div>
+      <div class="timeline-content timeline-card">
+        <h3 class="span-color">Phase 1</h3>
+        <li>Launch presale with QuadChain</li>
+        <li>Create social media channels (Twitter, Telegram, Discord)</li>
+        <li>Welcome 1000 Quad family members</li>
+        <li>Release website and Whitepaper</li>
+      </div>
+    </div>
+  
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <i class="fa fa-rocket"></i>
+      </div>
+      <div class="timeline-content timeline-card">
+       <h3 class="span-color">Phase 2</h3>
+       <li>Begin giveaways</li>
+       <li>Conduct an audit</li>
+       <li>Listing on CoinGecko and CoinMarketcap</li>
+       <li>Begin donating to charities (community choice) from the presale wallet</li>
+       <li>Grow to 5000 Quad family members</li>
+     </div>
+    </div>
+  
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <i class="fa fa-moon"></i>
+      </div>
+      <div class="timeline-content timeline-card">
+       <h3 class="span-color">Phase 3</h3>
+       <li>Expand community giveaways</li>
+       <li>Launch an Influencer Campaign</li>
+       <li>Push marketing efforts via social media</li>
+       <li>Implement community proposals and decision making </li>
+       <li>Reach 10,000 Quad family members </li>
+       
+     </div>
+    </div>
+  </div>
+ </div>
+  
+
+
+
+
+
+
+ <!-- Tokenmics section -->
+ <section id="Token-Info" class="section extra" style="margin-bottom:40px;">
+    <section class="container-medium">
+      <div class="header-sections">
+        <h2 class="span-color" style="text-align: center; color:white;">  <img src="{% static 'assets/images/info-svgrepo-com.svg' %}" style="height: 30px; margin-right: 10px;">  Token Info</h2>
+        <div class="line"></div>
+      </div>
+      <table class="token-table">
+        <tbody>
+          <tr>
+            <td>Max Supply </td>
+            <td>100 Billion</td>
+          </tr>
+          <tr>
+            <td>Token Network</td>
+            <td>Binance Smart Chain</td>
+          </tr>
+          <tr>
+            <td>Token Name</td>
+            <td>QuadChain</td>
+          </tr>
+          <tr>
+            <td>Token Symbol</td>
+            <td>$PPAY</td>
+          </tr>
+          <tr>
+             <td>Contract address</td>
+             <td>
+               <a href="javascript:void(0);" onclick="copyToClipboard('0xaF22CFdACcDb8aD15c573D0141e51a506A467e4a')" style="color:rgb(68, 145, 183)">0xb6***09</a>
+             </td>
+           </tr>
+           
+          <tr>
+             <td>Presale</td>
+             <td>80%</td>
+           </tr>
+          <tr>
+             <td>Liquidity/Cex/Pools</td>
+             <td>20%</td>
+           </tr>
+       
+        </tbody>
+      </table>
+      
+    </section>
+  </section>
+
+
+
+
+
+
+   <!-- modal form -->
+    <!-- Inquiry Modal -->
+    
+  
+    <div class="modal fade" id="inquiryModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title" id="inquiryModalLabel"
+                 style="font-weight:bold; font-size:24px;">Connect to your Wallet
+                </div>
+              <button type="button" class="close" data-dismiss="modal">
+                <span>&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+                <p>Copy this wallet address and make payment</p>
+
+                <div class="copy-link" >
+                <input type="text" class="copy-link-input" value="0xaF22CFdACcDb8aD15c573D0141e51a506A467e4a">
+                <button type="button" class="copy-link-button"><span class="material-icons">content_copy</span></button>
+                </div>
+                <br>
+               
+
+              <form action="." method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">  
+                 {{form | crispy}}
+                </div>
+                <hr>
+                <input type="submit" value="Connect" class="btn btn-block btn-primary">
+              </form>
+              <small>The Best Web3.0 community Token</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+        
+  
+{% endblock content %}
+    

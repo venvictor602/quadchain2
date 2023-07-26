@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   
+<head>
+      <meta charset="UTF-8">
+      <meta property="og:site_name" content="QuadChain: A Token on BINANCE SMART CHAIN" />
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:site_name" content="QuadChain: A Token on BINANCE SMART CHAIN" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="QuadChain: A Token on BINANCE SMART CHAIN" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+
+      <link rel="icon" type="{% static 'assets/images/pig1.png' %}" href="{% static 'assets/images/pugpayfinal.jpg' %}">
+      <title>QuadChain Presale: Decentralized Platform, Smart Contract Technology,Affordability,Accessibility,Privacy </title>
+      <link rel="stylesheet" href="{% static 'cdn/boot/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static 'style.css' %}">
+      <link rel="stylesheet" href="{% static 'pugpay.css' %}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> -->
+      <link rel="preconnect" href="https://fonts.googleapis.com/">
+      <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&amp;display=swap" rel="stylesheet">
+      <!--  font -->
+      <!-- <script type="text/javascript">WebFont.load({  google: {    families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"]  }});</script> -->
+      <link href="https://fonts.cdnfonts.com/css/aldhabi" rel="stylesheet">
+      <!-- Font awesome -->
+      <link rel="preconnect" href="https://fonts.googleapis.com/">
+      <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&amp;display=swap" rel="stylesheet">
+      <!-- Font Awesome -->
+      <link rel="preconnect" href="https://fonts.googleapis.com/">
+      <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&amp;display=swap" rel="stylesheet">
+      <!-- bootstrap -->
+      <script src="{% static 'cdn.jsdelivr.net/npm/%40popperjs/core%402.11.6/dist/umd/popper.min.js' %}" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+      <script src="{% static 'cdn.jsdelivr.net/npm/bootstrap%405.3.0-alpha1/dist/js/bootstrap.min.js' %}" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <style>
+        .copy-link{
+        --height:36px;
+        display: flex;
+        min-width: 250px;
+        }
+        .copy-link-input{
+            flex-grow: 1; 
+            padding: 0 8px; 
+            border: 1px solid #cccccc; 
+            border-right: none; 
+            outline: none;
+        }
+        .copy-link-input:hover{
+            background: #eeeeee !important;
+        }
+        .copy-link-button{
+            flex-shrink: 0;
+            height: var(--height);
+            width: var(--height);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #dddddd;
+            color: #333333;
+            outline:none;
+            border: 1px solid #cccccc;
+            cursor: pointer;
+        }
+
+        .copy-link-button:hover{
+            background:#cccccc ;
+        }
+    </style>
+      
+   </head>
+   <body>
+      <div class="preloader">
+         <img src="{% static 'assets/images/pugpayfinal.jpg' %}" width="150px" height="150px" alt="loader">
+      </div>
+      <div id="app">
+
+      {% include 'navbar.html' %}
+      {% block content %}
+        
+      {% endblock content %}
+      {% include 'footer.html' %}
+      
+    </div>
+    <script>
+     // Add an event listener to the window object to trigger the modal on page load/reload
+window.addEventListener('load', function () {
+  // Select the modal element by its ID
+  var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+  // Show the modal
+  myModal.show();
+});
+
+  </script>
+    <script>
+       function copyToClipboard(text) {
+       var textarea = document.createElement("textarea");
+       textarea.value = text;
+       textarea.style.position = "fixed";  // Prevent scrolling to bottom of page in MS Edge.
+       document.body.appendChild(textarea);
+       textarea.select();
+       document.execCommand("copy");
+       document.body.removeChild(textarea);
+       alert("Contract address copied to clipboard: " + text);
+}
+
+    </script>
+
+    <!-- Script of raised MATIC -->
+
+    <script src="{% static 'cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js' %}"></script>
+    <script>
+
+       const contractAddress = "0x7191521f230924672AfB93d4Db647C9E2A073066";
+       const contractAbi =  [{"inputs":[{"internalType":"address","name":"_tokenAddr","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"beneficiary","type":"address"},{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"BnbDeposited","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"beneficiary","type":"address"},{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"TokenDeposited","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"beneficiary","type":"address"},{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"TokenTransfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"fromAddress","type":"address"},{"indexed":false,"internalType":"address","name":"contractAddress","type":"address"},{"indexed":true,"internalType":"address","name":"toAddress","type":"address"},{"indexed":true,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"amountTransfered","type":"event"},{"inputs":[{"internalType":"address[]","name":"_recipients","type":"address[]"},{"internalType":"uint256[]","name":"_amount","type":"uint256[]"}],"name":"AirdropTokens","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address[]","name":"_recipients","type":"address[]"}],"name":"RemoveWhitelist","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"_owner","outputs":[{"internalType":"address payable","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"amountRaisedMATIC","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"balances","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"bnbBalance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"buyToken","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[],"name":"claim","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"claimIn","outputs":[{"internalType":"bool","name":"success","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"depositCrypto","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_amount","type":"uint256"}],"name":"depositTokens","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"hardCap","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"maticDecimal","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"maxContribution","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"minContribution","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"tokenAddr","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"tokenBalance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"tokenDecimal","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"tokenExchanged","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"tokenPriceMatci","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalHardCap","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalTransaction","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256[]","name":"amounts","type":"uint256[]"},{"internalType":"address payable[]","name":"receivers","type":"address[]"}],"name":"transferCrypto","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"address payable","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"turnWhitelist","outputs":[{"internalType":"bool","name":"success","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"newHardcapValue","type":"uint256"}],"name":"updateHardCap","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newTokenAddr","type":"address"}],"name":"updateTokenAddress","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"min","type":"uint256"},{"internalType":"uint256","name":"max","type":"uint256"}],"name":"updateTokenContribution","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"newDecimal","type":"uint256"}],"name":"updateTokenDecimal","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"newTokenValue","type":"uint256"}],"name":"updateTokenPrice","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"whitelist","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address[]","name":"_recipients","type":"address[]"}],"name":"whitelistAddress","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"whitelisted","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address payable","name":"beneficiary","type":"address"}],"name":"withdrawCrypto","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"beneficiary","type":"address"}],"name":"withdrawTokens","outputs":[],"stateMutability":"nonpayable","type":"function"},{"stateMutability":"payable","type":"receive"}];
+
+
+       // initialize web3 with a provider
+       const web3 = new Web3("https://bsc-dataseed.binance.org/"); 
+
+    const contractInstance = new web3.eth.Contract(contractAbi, contractAddress);
+
+    const amountRaisedElement = document.getElementById("amount-raised");
+    const progressBar = document.getElementById("progress");
+
+    contractInstance.methods.amountRaisedMATIC().call()
+    .then(result => {
+       const valueElement = document.getElementById("amount-raised");
+       valueElement.textContent = result/10e17;
+
+       const goalAmount = 10000;
+       const percentage = (result / (goalAmount * 10e17)) * 100;
+       progressBar.innerHTML = `<div class="progress-bar-fill" style="width:${percentage}%">${percentage}%</div>`;
+    })
+    .catch(error => {
+       console.error("Error calling contract function:", error);
+    });
+
+
+    </script>
+    <script src="{% static 'jquery-3.3.1.min.js' %} "></script>
+    <script src="{% static 'bootstrap.bundle.min.js' %} "></script>
+
+    <script src="{% static 'cdn/vue/vue.js' %}"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script> -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'cdn/toastify/toastify.min.css' %}">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="text/javascript" src="{% static 'unpkg.com/web3/web3.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'unpkg.com/web3modal/index.js' %}"></script>
+    <script type="text/javascript"
+       src="{% static 'unpkg.com/wallet-connect/index.min.js' %}"></script>
+    <script  src="{% static 'index.js' %}"></script>
+    <!-- <script src="pre.js" charset="utf-8"></script> -->
+    <script src="{% static 'jquery-3.5.1.js' %}"></script>
+    <script>
+       $(window).on("load",function(){
+           $(".preloader").fadeOut();
+       })
+    </script>
+    <script>
+       function myFunction() {
+       alert("Coming Soon");
+       }
+    </script>
+
+
+ </body>
+
+<script>
+    document.querySelectorAll(".copy-link").forEach((copyLinkParent) => {
+  const inputField = copyLinkParent.querySelector(".copy-link-input");
+  const copyButton = copyLinkParent.querySelector(".copy-link-button");
+  const text = inputField.value;
+
+  inputField.addEventListener("focus", () => inputField.select());
+
+  copyButton.addEventListener("click", () => {
+    inputField.select();
+    navigator.clipboard.writeText(text);
+
+    inputField.value = "Copied!";
+    setTimeout(() => (inputField.value = text), 2000);
+  });
+});
+
+</script>
+</html>

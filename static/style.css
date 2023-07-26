@@ -1,0 +1,833 @@
+body {
+  background-repeat: inherit;
+  /* font-family: 'Aldhabi', sans-serif; */
+  font-family: 'Hammersmith One', sans-serif;
+  background-size: 100vw 100vh;
+  /* background-image: url("assets/images/bord-bgg1.png"); */
+  background-color: #000000;
+  background-repeat: no-repeat;
+    background-size: cover;
+    /* overflow: hidden; */
+
+    
+
+
+    
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* preloader css */
+
+
+.chatgpt{
+  color: #00C4F4;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+/* Preloader */
+.preloader{
+  position: fixed;
+  width:100%;
+  height: 100%;
+  top:0;
+  left:0;
+  z-index: 999;
+  background: rgb(0, 0, 0);
+
+}
+.preloader img{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+
+
+.form-range:read-only, .form-range:disabled {
+  pointer-events: none;
+}
+
+.navbar-toggler{
+  background-color: #000000 !important;
+}
+
+.navbar-toggler-icon {
+  background-image: none;
+}
+.navbar-toggler-icon::before {
+  font-family: FontAwesome;
+  content: "\f0c9"; /* fa-bars, fa-navicon */
+  color: white;
+}
+
+
+.astro-image{
+  text-align: center;
+}
+
+.button-center{
+  text-align: center;
+  justify-content: center;
+}
+
+.navbar {
+  padding: 20px 40px;
+  border-radius: 20px;
+  background: #000000 !important;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  border: 2px solid #0ab8ff !important;
+  color: white !important;
+  background: #0b391d;
+  border: white !important;
+  border-radius: 30px;
+  /* background-image: linear-gradient(to right,
+  #c21ad2,
+  #bb01ce,
+  #8614a7,
+  rgb(13 116 113)); */
+  color: rgb(1, 206, 164);
+}
+
+.fr-hdng-shdw {
+  text-shadow: 0 20px 0 rgba(255, 255, 255, 0.75),
+    0 40px 0 rgba(255, 255, 255, 0.55), 0 60px 0 rgba(255, 255, 255, 0.35);
+  margin-bottom: 80px;
+}
+
+.btn-outline-primary {
+  background-color: #060606 !important;
+
+  color: white;
+  font-weight: bold;
+  border: 2px solid #0b703f;
+  /* border-radius: 30px; */
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+  background-color: #0a3802 !important;
+  box-shadow: none !important;
+  border: 2px solid #000000 !important;
+}
+
+.fr-quint-shdw {
+  color: #01cea4;
+  text-shadow: 0 20px 0 rgba(1, 206, 164, 0.75),
+    0 40px 0 rgba(1, 206, 164, 0.55), 0 60px 0 rgba(1, 206, 164, 0.35);
+}
+
+.card {
+  border-radius: 20px;
+  background: #1a1f20;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.inner-card-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-row-gap: 25px;
+  grid-column-gap: 15px;
+}
+
+.inner-card-div>div:nth-child(1) {
+  grid-column: 1/3;
+}
+
+.inner-card-div>div {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 15px rgba(20, 147, 182, 0.1);
+}
+
+.inner-card-div>div p {
+  margin-bottom: 0 !important;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.card-body>h5,
+.inner-card-div>div h5 {
+
+  font-size: 13px;
+  color: #000000;
+  font-weight: 700;
+  margin-bottom: 0 !important;
+}
+
+.form-control {
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.151);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+  border:#00C4F4 !important;
+  background-color: #0b391d;
+  border: none;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 12px;
+  width: 45%;
+  box-shadow: 0px 8px 15px rgba(28, 107, 146, 0.1);
+}
+
+.btn-secondary:focus,
+.btn-secondary:hover,
+.btn-secondary:active {
+  color: #ffffff !important;
+  background-color: #000000 !important;
+}
+
+.list-unstyled i {
+  font-size: 24px;
+  margin-right: 20px;
+  color: #ffffff;
+}
+
+input[type='range'] {
+  background-color: #9a905d;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  color: #13bba4;
+
+}
+
+input[type='range']::-webkit-slider-thumb {
+  cursor: ew-resize;
+  background: #434343;
+}
+
+.count-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: scale(.9)
+}
+
+.count-box {
+  background-color: white;
+  border-radius: 7px;
+  width: 70px;
+  margin: 3px;
+  padding: 5px 0;
+}
+
+.count-number {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 97%
+}
+
+.count-text {
+  font-size: 12px;
+}
+
+.count-and {
+  font-size: 12px;
+}
+
+.token-wrapper {
+  width: 100%
+}
+
+.count-buy-now {
+  border-radius: 15px;
+  background-image: var(--gradient);
+  font-weight: normal;
+  font-size: 16px;
+  box-shadow: 0 7px 15px 5px var(--neon);
+  padding: 4px 16px
+}
+
+.count-buy-now:hover {
+  transform: scale(1.1);
+  transition: all .2s ease 0s;
+  box-shadow: none
+}
+
+.count-round {
+  font-size: 24px
+}
+
+.count-discount {
+  font-size: 24px
+}
+
+.count-counter-wrapper {
+  padding-top: 30px
+}
+
+@media screen and (max-width: 992px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .w-sm-100 {
+    width: 50% !important;
+    margin-top: 15px;
+  }
+
+  .card {
+    margin-top: 35px !important;
+    padding: 0 !important;
+  }
+
+  .fr-hdng-shdw,
+  .fr-quint-shdw {
+    font-size: 23px !important;
+  }
+}
+
+.highlightstext{
+  color: white;
+  border: 2px solid #ce0194;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+
+/* New Button css */
+/* 
+<!-- HTML !-->
+<button class="button-26" role="button">Button 26</button> */
+
+/* CSS */
+/* .button-26 {
+  appearance: button;
+  background-color: #1652F0;
+  border: 1px solid #1652F0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Graphik,-apple-system,system-ui,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  font-size: 14px;
+  line-height: 1.15;
+  overflow: visible;
+  padding: 12px 16px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: all 80ms ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+}
+
+.button-26:disabled {
+  opacity: .5;
+}
+
+.button-26:focus {
+  outline: 0;
+}
+
+.button-26:hover {
+  background-color: #0A46E4;
+  border-color: #0A46E4;
+}
+
+.button-26:active {
+  background-color: #0039D7;
+  border-color: #0039D7;
+} */
+
+
+/* <!-- HTML !-->
+<button class="button-85" role="button">Button 85</button> */
+
+/* CSS */
+/* .button-26 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-26:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-26:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+} */
+
+
+
+
+
+/* 
+<!-- HTML !-->
+<button class="button-62" role="button">Button 62</button> */
+
+/* CSS */
+/* .button-26 {
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.button-26:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-26:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+} */
+
+
+
+.card-1 {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+  box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+  border: none;
+  margin-bottom: 30px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-1 .card-block {
+  padding: 25px;
+  color: #fcfcfc;
+  background-color: rgb(19 21 32);
+  border-radius: 24px;
+}
+
+.order-card i {
+  font-size: 26px;
+}
+
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+
+.card-boxx{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-weight: bolder;
+
+}
+
+
+/* zkPiggy TOken */
+
+
+/* .button-26 {
+
+  width: 13.75rem;
+  padding: 0.9375rem 1.875rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.375rem;
+  background-color: #ff7300;
+  transition: all 400ms ease;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button-26:hover {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px #ff7300;
+  color: #f32508;
+} */
+
+
+
+.main-container{
+  margin-bottom:60px;
+  margin-top: 50px;
+
+}
+
+
+.glowing-effect {
+  box-shadow: 0 0 10px 3px #00baf8; /* adjust values as desired */
+  animation: glowing 2s ease-in-out infinite; /* adjust duration as desired */
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 10px 3px #649cc1;
+  }
+  50% {
+    box-shadow: 0 0 20px 6px #6220fb;
+  }
+  100% {
+    box-shadow: 0 0 10px 3px #6220fb;
+  }
+}
+
+
+
+/* Line */
+.line {
+  height: 0.4375rem;
+  max-width: 11.25rem;
+  margin-bottom: 2.5rem;
+  background-image: linear-gradient(225deg, rgba(255, 255, 255, 0), hsla(0, 0%, 100%, 0) 12%, #6220fb 46%);
+}
+
+@media screen and (max-width: 991px) {
+  
+  .line {
+    width: 11.25rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+
+
+
+
+/* Define the animation classes */
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+}
+
+/* Define the animation keyframes */
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0, 100%, 0);
+      opacity: 0;
+  }
+
+  to {
+      transform: none;
+      opacity: 1;
+  }
+}
+
+
+
+/* Card animation */
+/* Animation for Step Cards */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.order-card {
+  animation: slideInFromLeft 1s ease-out;
+}
+
+/* Animation for Line */
+@keyframes drawLine {
+  0% {
+    stroke-dasharray: 0, 200;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 200, 200;
+    stroke-dashoffset: 200;
+  }
+}
+
+.line {
+  stroke-dasharray: 200, 200;
+  stroke-dashoffset: 200;
+  animation: drawLine 1s ease-in-out forwards;
+}
+
+
+
+/* Thug life button */
+.button-26 {
+  font-size: 1rem;
+  padding: 0.8em 2em;
+  background-color: #000;
+  border: 3px solid #f3bd2d;
+  border-radius: 1em;
+  color: #fff;
+  font-weight: bolder;
+  transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s;
+  box-shadow: -5px 5px 0px 0px #f3bd2d;
+}
+
+.button-26:hover {
+  transform: translate(5px, -5px);
+}
+
+
+
+.progress-bar {
+  height: 20px;
+  background-color: #000000;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.progress-bar-fill {
+  height: 20px;
+  background-color: #4caf50;
+}
+
+
+
+
+
+
+.container {
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-6 {
+  width: 100%;
+  padding: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .col-md-6 {
+    width: 50%;
+    padding: 20px;
+  }
+}
+
+
+/* Raodmap phase 1 to phase */
+.timeline-container {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: black;
+  padding: 50px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  display: inline-flex;
+  align-items: center;
+  margin: 20px;
+  width: 300px;
+}
+
+.timeline-icon {
+  background-color: #992df3;
+  color: black;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.timeline-content {
+  background: linear-gradient(to right, #212121, #616161);
+  color: white;
+  margin-left: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.timeline-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+.timeline-card {
+  width: 300px;
+  height: 350px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: inline-block;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+
+.containerr {
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .line {
+    margin-left: 400px;
+  }
+}
+
+
+/* Tokenomics */
+/* Token Info Section */
+
+
+.token-table {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: 3px solid #0051ff;
+  text-align: center;
+}
+
+.token-table td {
+  padding: 12px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #000;
+}
+
+.token-table td:first-child {
+  border-right: 3px solid #003cff;
+}
+
+.token-grid-circle {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.token-info-circle {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.token-info-circle.green {
+  background-color: #f3bd2d;
+  color: #000000;
+}
+
+
+
+/* Symbol color */
