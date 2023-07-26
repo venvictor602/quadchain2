@@ -91,12 +91,12 @@ WSGI_APPLICATION = 'bitcoin.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'URL': 'postgresql://postgres:AuQCoI8CaGaN6bgB7y9E@containers-us-west-50.railway.app:8046/railway',
+        'URL': 'postgresql://postgres:zSaYCCayc4mUN7PhuTFh@containers-us-west-133.railway.app:6133/railway',
         'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'AuQCoI8CaGaN6bgB7y9E',
-        'HOST': 'containers-us-west-50.railway.app',
-        'PORT': 8046,
+        'PASSWORD': 'zSaYCCayc4mUN7PhuTFh',
+        'HOST': 'containers-us-west-133.railway.app',
+        'PORT': 6133,
     }
 }
 
