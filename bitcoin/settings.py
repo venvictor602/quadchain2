@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-oq%ihp9_04q*gtqejedxyz4n!a7h$xyqe&mb&k87^sw$no1dc9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
+DEBUG = True
 
-#ALLOWED_HOSTS = [ '.vercel.app','.now.sh','127.0.0.1','localhost', 'https://www.quadchain.live','www.quadchain.live' ]
+ALLOWED_HOSTS = [ '.vercel.app','.now.sh','127.0.0.1','localhost', 'https://www.quadchain.live','www.quadchain.live' ]
 
 
 # Application definition
